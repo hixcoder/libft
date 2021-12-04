@@ -32,10 +32,10 @@ CC = cc
 
 Include = libft.h
 
-%.o:%.c 
+%.o:%.c ${Include}
 		${CC} ${CFLAGS} -g -c $< -o $@
 
-$(NAME): ${OBJSRC} ${Include}
+$(NAME): ${OBJSRC} 
 	ar rcs ${NAME} ${OBJSRC}
 
 bonus : ${OBJBONUS} ${OBJSRC} ${Include}
